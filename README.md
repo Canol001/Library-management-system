@@ -24,7 +24,7 @@ Welcome to the **Library Management System**, an interactive platform to manage 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/library-management-system.git
+   git clone https://github.com/Canol001/library-management-system.git
    
 2. Navigate to the project directory:
    ```bash
@@ -82,8 +82,8 @@ Open a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 🌐 Connect with Us
-GitHub: YourUsername
-Twitter: @YourTwitterHandle
+GitHub: Canol001
+Twitter: @canol okoth
 🌈 Animated Text Example
 Check out this animated text!
 
