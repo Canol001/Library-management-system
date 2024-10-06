@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .book-container {
+            position: relative;
+            width: 360px;
+            height: 500px;
+            perspective: 1000px;
+        }
+        
+        .book-page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            backface-visibility: hidden;
+            transition: transform 0.6s ease;
+        }
+        
+        .login-page {
+            transform: rotateY(0deg);
+        }
+        
+        .register-page {
+            transform: rotateY(-180deg);
+        }
+        
+        .book-container.flip .login-page {
+            transform: rotateY(180deg);
+        }
+        
+        .book-container.flip .register-page {
+            transform: rotateY(0deg);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        a {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="book-container">
+            <!-- Login Page -->
+            <div class="book-page login-page">
+                <h2>Sign In</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <p class="text-center mt-3">
+                    Don't have an account? <a href="#" class="toggle-page">Register</a>
+                </p>
+            </div>
+
+            <!-- Register Page -->
+            <div class="book-page register-page">
+                <h2>Register</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="reg-name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="reg-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reg-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="reg-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reg-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="reg-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                </form>
+                <p class="text-center mt-3">
+                    Already have an account? <a href="#" class="toggle-page">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-page').forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('.book-container').classList.toggle('flip');
+            });
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - LibraryMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Universal Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007BFF;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Profile Page */
+.card-header {
+    font-weight: bold;
+}
+
+.card-body {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+img.rounded-circle {
+    width: 150px;
+    height: 150px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .col-lg-4 {
+        margin-bottom: 20px;
+    }
+
+    img.rounded-circle {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">LibraryMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="borrowed_books.html">Borrowed Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="notification.html">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Profile Info Section -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="https://th.bing.com/th/id/OIP.YdkNhFNLUQ_NN3gZir70pQHaHZ?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="User Avatar" class="rounded-circle mb-3">
+                        <h4 class="mb-2">John Doe</h4>
+                        <p class="text-muted">Member Since: Jan 2020</p>
+                    </div>
+                </div>
+                <div class="list-group shadow-sm">
+                    <a href="#" class="list-group-item list-group-item-action active">Profile Overview</a>
+                    <a href="#" class="list-group-item list-group-item-action">Edit Profile</a>
+                    <a href="#" class="list-group-item list-group-item-action">Change Password</a>
+                    <a href="#" class="list-group-item list-group-item-action">Borrowed Books</a>
+                </div>
+            </div>
+
+            <!-- Profile Edit Form -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Edit Profile
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="John Doe">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="johndoe@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="+123 456 7890">
+                            </div>
+                            <div class="mb-3">
+                                <label for="membership" class="form-label">Membership Status</label>
+                                <input type="text" class="form-control" id="membership" value="Active" readonly>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Change Password Section -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Change Password
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <input type="password" class="form-control" id="currentPassword" placeholder="Current Password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm New Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Borrowed Books Section -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        Borrowed Books History
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">The Great Gatsby <span class="badge bg-success">Returned</span></li>
+                            <li class="list-group-item">1984 <span class="badge bg-danger">Overdue</span></li>
+                            <li class="list-group-item">Moby Dick <span class="badge bg-warning">Due in 3 days</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

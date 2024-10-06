@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - LibraryMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Universal Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007BFF;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Notification Page */
+.list-group-item {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.badge {
+    font-size: 14px;
+}
+
+.badge-primary {
+    background-color: #007BFF;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h5 {
+        font-size: 18px;
+    }
+
+    .badge {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">LibraryMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="borrowed_books.html">Borrowed Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <h3 class="mb-4">Notifications</h3>
+
+        <!-- Notification List -->
+        <div class="list-group">
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-1">New Book Arrival: "Digital Transformation in Libraries"</h5>
+                    <p class="mb-1">Explore the latest book available in our library collection.</p>
+                    <small class="text-muted">3 mins ago</small>
+                </div>
+                <span class="badge bg-primary">New</span>
+            </div>
+
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-1">Overdue Book: "1984" by George Orwell</h5>
+                    <p class="mb-1">Please return the book before you incur additional fines.</p>
+                    <small class="text-muted">1 day ago</small>
+                </div>
+                <span class="badge bg-danger">Overdue</span>
+            </div>
+
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-1">Reminder: "The Great Gatsby" due in 2 days</h5>
+                    <p class="mb-1">Make sure to return or renew the book on time.</p>
+                    <small class="text-muted">2 hours ago</small>
+                </div>
+                <span class="badge bg-warning">Reminder</span>
+            </div>
+
+            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-1">Library Closed on Saturday</h5>
+                    <p class="mb-1">The library will be closed for maintenance this Saturday.</p>
+                    <small class="text-muted">5 days ago</small>
+                </div>
+                <span class="badge bg-secondary">General</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
